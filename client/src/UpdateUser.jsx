@@ -10,7 +10,7 @@ const UpdateUser = () => {
   const navigate = useNavigate()
 
   useEffect(()=>{
-    axios.get('http://localhost:3000/getUser/'+id)
+    axios.get('https://crud-backend-aemo.onrender.com/getUser/'+id)
     .then(result => {
       console.log(result) 
       setName(result.data.name)
@@ -22,7 +22,7 @@ const UpdateUser = () => {
 
  const onSubmitfun = (e)=>{
   e.preventDefault()
-  axios.put("http://localhost:3000/updateUser/"+id, {name,email,age})
+  axios.put("https://crud-backend-aemo.onrender.com/updateUser/"+id, {name,email,age})
     .then(result => {
       console.log(result)
       navigate('/')

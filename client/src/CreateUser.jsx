@@ -10,7 +10,7 @@ const CreateUser = () => {
 
   const SubmitFun = (e)=>{
     e.preventDefault()
-    axios.post("http://localhost:3000/createUser", {name,email,age})
+    axios.post("https://crud-backend-aemo.onrender.com", {name,email,age})
     .then(result => {
       console.log(result)
       navigate('/')
